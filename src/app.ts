@@ -3,10 +3,16 @@ import express from 'express';
 import cors from 'cors';
 import type { Express, Request, Response } from 'express';
 import env from './env.js'; // import the validated env
+import authRoutes from './routes/authRoutes.js'
+import habitRoutes from './routes/habitRoutes.js'
+import userRoutes from './routes/userRoutes.js'
 
 const app: Express = express();
 
 app.use(cors());
+app.use('/auth', authRoutes)
+app.use('/users', userRoutes)
+app.use('/habits', habitRoutes)
 
 // Health check route
 app.get('/health', (req: Request, res: Response): void => {
