@@ -6,6 +6,7 @@ npx tsc --init
 npm i express
 npm install -D typescript
 npm i -D @types/node @types/express @types/cors @types/morgan
+npm install @epic-web/remember
 
 npm i -D tsx
 
